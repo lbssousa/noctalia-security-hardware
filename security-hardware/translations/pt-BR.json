@@ -1,0 +1,144 @@
+{
+  "cancel": "Cancelar",
+  "fingerprint": {
+    "add": "Adicionar Digital",
+    "choose-finger": "Escolha o dedo a cadastrar.",
+    "description": "Digitais usadas para desbloquear e para autorizar ações administrativas",
+    "enroll-title": "Adicionar Digital",
+    "enrolled": "Digitais cadastradas",
+    "error": {
+      "generic": "Erro no leitor de digitais: {message}",
+      "in-use": "O leitor de digitais está em uso por outro programa",
+      "no-device": "O leitor de digitais não está mais disponível",
+      "no-prints": "Nenhuma digital cadastrada neste leitor",
+      "not-deleted": "Não foi possível excluir a digital",
+      "permission-denied": "Sem autorização para usar o leitor de digitais"
+    },
+    "finger": {
+      "left-index": "Indicador esquerdo",
+      "left-little": "Mínimo esquerdo",
+      "left-middle": "Médio esquerdo",
+      "left-ring": "Anelar esquerdo",
+      "left-thumb": "Polegar esquerdo",
+      "right-index": "Indicador direito",
+      "right-little": "Mínimo direito",
+      "right-middle": "Médio direito",
+      "right-ring": "Anelar direito",
+      "right-thumb": "Polegar direito"
+    },
+    "label": "Leitor de Impressão Digital",
+    "left-hand": "Mão esquerda",
+    "no-reader": "Nenhum leitor de impressão digital encontrado",
+    "none-enrolled": "Nenhuma digital cadastrada",
+    "reader": "Leitor:",
+    "right-hand": "Mão direita",
+    "scan-type": {
+      "press": "sensor de toque",
+      "swipe": "sensor de deslizar"
+    },
+    "stages": "Leitura {done} de {total}",
+    "status": {
+      "data-full": "O leitor não tem espaço para mais digitais",
+      "deleted": "{finger} excluído",
+      "disconnected": "O leitor de digitais foi desconectado",
+      "duplicate": "Esta digital já está cadastrada",
+      "enroll-completed": "Digital cadastrada",
+      "enroll-failed": "O cadastro falhou. Tente de novo",
+      "finger-not-centered": "Centralize o dedo no leitor",
+      "match": "Digital reconhecida",
+      "match-finger": "Reconhecida: {finger}",
+      "no-match": "Digital não reconhecida",
+      "preparing": "Preparando o leitor…",
+      "remove-and-retry": "Levante o dedo e tente de novo",
+      "retry-scan": "Leia de novo",
+      "stage-passed": "Levante o dedo e toque no leitor de novo",
+      "swipe": "Deslize o dedo pelo leitor",
+      "swipe-too-short": "Deslize curto demais. Tente de novo",
+      "touch": "Toque no leitor com o dedo",
+      "verify-failed": "Não foi possível ler a digital",
+      "verify-timeout": "Nenhum dedo detectado. Teste encerrado"
+    },
+    "stop-test": "Parar Teste",
+    "test": "Testar Digital",
+    "try-again": "Tentar de Novo"
+  },
+  "refresh": "Atualizar",
+  "security-keys": {
+    "fido": {
+      "authfile": "Gravadas em {path}",
+      "connected": "Chaves conectadas",
+      "credential": "Chave {index} · {handle}",
+      "description": "Chaves FIDO2/U2F (ex.: YubiKey) aceitas pelo pam_u2f no sudo, no polkit e na tela de bloqueio",
+      "label": "Chaves FIDO2 / U2F",
+      "none-connected": "Nenhuma chave de segurança conectada",
+      "none-registered": "Nenhuma chave registrada para este usuário",
+      "pin-hint": "Se a chave tiver PIN FIDO2, digite-o abaixo. Caso contrário, deixe em branco.",
+      "pin-placeholder": "PIN da chave (opcional)",
+      "register": "Registrar Chave",
+      "register-intro": "Conecte a chave de segurança, clique em Registrar e toque na chave quando ela piscar.",
+      "register-title": "Registrar Chave de Segurança",
+      "registered": "Chaves registradas",
+      "status": {
+        "cancelled": "",
+        "no-device": "Nenhuma chave de segurança encontrada. Conecte-a e tente de novo",
+        "pin-required": "Esta chave exige o PIN",
+        "register-failed": "O registro falhou: {message}",
+        "registered": "Chave registrada",
+        "removed": "Chave removida",
+        "test-no-key": "Nenhuma chave registrada está conectada",
+        "test-ok": "Chave aceita",
+        "test-timeout": "A chave não foi tocada a tempo",
+        "testing": "Aguardando uma chave registrada…",
+        "timeout": "A chave não foi tocada a tempo",
+        "touch": "Toque na chave de segurança quando ela piscar",
+        "write-failed": "Não foi possível gravar {path}"
+      },
+      "stop-test": "Parar Teste",
+      "test": "Testar Chave"
+    },
+    "gpg": {
+      "card": "Cartão:",
+      "description": "Chave OpenPGP guardada num cartão inteligente ou chave de segurança",
+      "fingerprint": "Chave de assinatura:",
+      "holder": "Titular:",
+      "import": "Importar Chave Pública",
+      "import-file": "Importar Arquivo",
+      "import-file-title": "Caminho do arquivo da chave pública",
+      "label": "Chave GPG no Cartão",
+      "no-card": "Nenhum cartão OpenPGP detectado",
+      "serial": "serial {serial}",
+      "state": {
+        "label": "Situação:",
+        "missing": "chave pública fora do chaveiro",
+        "no-key": "nenhuma chave guardada no cartão",
+        "public-only": "chave pública importada, cartão ainda não vinculado",
+        "ready": "pronta para uso"
+      },
+      "status": {
+        "fetching-keyserver": "Buscando a chave pública no servidor de chaves…",
+        "fetching-url": "Buscando a chave pública pela URL do cartão…",
+        "import-failed": "Não foi possível obter a chave pública. Importe-a de um arquivo",
+        "import-file-failed": "A importação falhou: {message}",
+        "imported": "Chave pública importada e vinculada ao cartão",
+        "importing-file": "Importando a chave pública…",
+        "offline": "O modo offline está ativo. Importe a chave pública de um arquivo",
+        "trust-failed": "Não foi possível definir a confiança: {message}",
+        "trusted": "Chave marcada com confiança absoluta"
+      },
+      "trust": {
+        "label": "Confiança:",
+        "not-ultimate": "não absoluta",
+        "ultimate": "absoluta"
+      },
+      "trust-button": "Confiar Plenamente",
+      "url": "URL da chave pública:"
+    }
+  },
+  "settings": {
+    "helper": {
+      "description": "Caminho do auxiliar noctalia-security-hw",
+      "label": "Auxiliar"
+    }
+  },
+  "title": "Hardware de Segurança"
+}

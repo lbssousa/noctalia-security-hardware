@@ -1,0 +1,14 @@
+# Plugin source for Noctalia: add it with
+#   noctalia msg plugins source add security-hardware git https://github.com/lbssousa/noctalia-security-hardware
+# The plugin.toml in each plugin directory stays the source of truth.
+
+[[plugin]]
+id = "lbssousa/security-hardware"
+name = "Security Hardware"
+version = "1.0.0"
+author = "lbssousa"
+license = "MIT"
+icon = "fingerprint"
+description = "Enroll fingerprints, register FIDO2/U2F keys and set up the OpenPGP card key."
+plugin_api = 42
+tags = ["security", "system", "utility"]

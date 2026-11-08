@@ -1,0 +1,144 @@
+{
+  "cancel": "Cancel",
+  "fingerprint": {
+    "add": "Add Fingerprint",
+    "choose-finger": "Choose the finger to enroll.",
+    "description": "Fingerprints used to unlock and to authorize administrative actions",
+    "enroll-title": "Add Fingerprint",
+    "enrolled": "Enrolled fingerprints",
+    "error": {
+      "generic": "Fingerprint reader error: {message}",
+      "in-use": "The fingerprint reader is in use by another program",
+      "no-device": "The fingerprint reader is no longer available",
+      "no-prints": "No fingerprints are enrolled on this reader",
+      "not-deleted": "The fingerprint could not be deleted",
+      "permission-denied": "Not authorized to use the fingerprint reader"
+    },
+    "finger": {
+      "left-index": "Left index finger",
+      "left-little": "Left little finger",
+      "left-middle": "Left middle finger",
+      "left-ring": "Left ring finger",
+      "left-thumb": "Left thumb",
+      "right-index": "Right index finger",
+      "right-little": "Right little finger",
+      "right-middle": "Right middle finger",
+      "right-ring": "Right ring finger",
+      "right-thumb": "Right thumb"
+    },
+    "label": "Fingerprint Reader",
+    "left-hand": "Left hand",
+    "no-reader": "No fingerprint reader found",
+    "none-enrolled": "No fingerprints enrolled yet",
+    "reader": "Reader:",
+    "right-hand": "Right hand",
+    "scan-type": {
+      "press": "touch sensor",
+      "swipe": "swipe sensor"
+    },
+    "stages": "Scan {done} of {total}",
+    "status": {
+      "data-full": "The reader has no room for more fingerprints",
+      "deleted": "{finger} deleted",
+      "disconnected": "The fingerprint reader was disconnected",
+      "duplicate": "This fingerprint is already enrolled",
+      "enroll-completed": "Fingerprint enrolled",
+      "enroll-failed": "Enrollment failed. Try again",
+      "finger-not-centered": "Center your finger on the reader",
+      "match": "Fingerprint recognized",
+      "match-finger": "Recognized: {finger}",
+      "no-match": "Fingerprint not recognized",
+      "preparing": "Preparing the reader…",
+      "remove-and-retry": "Lift your finger and try again",
+      "retry-scan": "Scan again",
+      "stage-passed": "Lift your finger and touch the reader again",
+      "swipe": "Swipe your finger across the reader",
+      "swipe-too-short": "Swipe was too short. Try again",
+      "touch": "Touch the reader with your finger",
+      "verify-failed": "Could not read the fingerprint",
+      "verify-timeout": "No finger detected. Test stopped"
+    },
+    "stop-test": "Stop Test",
+    "test": "Test Fingerprint",
+    "try-again": "Try Again"
+  },
+  "refresh": "Refresh",
+  "security-keys": {
+    "fido": {
+      "authfile": "Stored in {path}",
+      "connected": "Connected keys",
+      "credential": "Key {index} · {handle}",
+      "description": "FIDO2/U2F keys (e.g. YubiKey) accepted by pam_u2f for sudo, polkit and the lock screen",
+      "label": "FIDO2 / U2F Keys",
+      "none-connected": "No security key connected",
+      "none-registered": "No keys registered for this user",
+      "pin-hint": "If the key has a FIDO2 PIN, enter it below. Leave it empty otherwise.",
+      "pin-placeholder": "Key PIN (optional)",
+      "register": "Register Key",
+      "register-intro": "Plug in the security key, then press Register and touch the key when it blinks.",
+      "register-title": "Register Security Key",
+      "registered": "Registered keys",
+      "status": {
+        "cancelled": "",
+        "no-device": "No security key found. Plug it in and try again",
+        "pin-required": "This key requires its PIN",
+        "register-failed": "Registration failed: {message}",
+        "registered": "Key registered",
+        "removed": "Key removed",
+        "test-no-key": "No registered key is plugged in",
+        "test-ok": "Key accepted",
+        "test-timeout": "The key was not touched in time",
+        "testing": "Waiting for a registered key…",
+        "timeout": "The key was not touched in time",
+        "touch": "Touch the security key when it blinks",
+        "write-failed": "Could not write {path}"
+      },
+      "stop-test": "Stop Test",
+      "test": "Test Key"
+    },
+    "gpg": {
+      "card": "Card:",
+      "description": "OpenPGP key stored on a smartcard or security key",
+      "fingerprint": "Signing key:",
+      "holder": "Holder:",
+      "import": "Import Public Key",
+      "import-file": "Import File",
+      "import-file-title": "Path to the public key file",
+      "label": "GPG Key on Card",
+      "no-card": "No OpenPGP card detected",
+      "serial": "serial {serial}",
+      "state": {
+        "label": "Status:",
+        "missing": "public key not in the keyring",
+        "no-key": "no key stored on the card",
+        "public-only": "public key imported, card not linked yet",
+        "ready": "ready to use"
+      },
+      "status": {
+        "fetching-keyserver": "Fetching the public key from the keyserver…",
+        "fetching-url": "Fetching the public key from the card URL…",
+        "import-failed": "Could not fetch the public key. Import it from a file",
+        "import-file-failed": "Import failed: {message}",
+        "imported": "Public key imported and linked to the card",
+        "importing-file": "Importing the public key…",
+        "offline": "Offline mode is on. Import the public key from a file",
+        "trust-failed": "Could not set the trust: {message}",
+        "trusted": "Key marked as ultimately trusted"
+      },
+      "trust": {
+        "label": "Trust:",
+        "not-ultimate": "not ultimate",
+        "ultimate": "ultimate"
+      },
+      "trust-button": "Trust Ultimately",
+      "url": "Public key URL:"
+    }
+  },
+  "settings": {
+    "helper": {
+      "description": "Path of the noctalia-security-hw helper",
+      "label": "Helper"
+    }
+  },
+  "title": "Security Hardware"
+}
