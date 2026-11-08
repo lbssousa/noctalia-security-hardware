@@ -1,0 +1,19 @@
+version: 2
+updates:
+  # The workflows' actions, pinned by commit: Dependabot moves the SHA and its comment together.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "06:00"
+      timezone: America/Sao_Paulo
+    # Wait a week before taking a new release: time for a compromised one to be noticed.
+    cooldown:
+      default-days: 7
+    open-pull-requests-limit: 5
+    groups:
+      actions-maintenance:
+        applies-to: version-updates
+        patterns: ["*"]
+        update-types: [minor, patch]
