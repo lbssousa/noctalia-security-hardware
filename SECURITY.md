@@ -6,7 +6,8 @@ keys from a security key, writes `~/.ssh` and passes PINs to `pamu2fcfg`, `fido2
 
 ## Reporting a vulnerability
 
-Use **Security → Report a vulnerability** on this repository, which opens a private advisory.
+Use **Security → Report a vulnerability** on this repository, which opens a private advisory:
+<https://github.com/lbssousa/noctalia-security-hardware/security/advisories/new>.
 Please don't open a public issue for a vulnerability.
 
 A useful report includes:
