@@ -1,16 +1,17 @@
-# Fingerprints (fprintd), FIDO2/U2F keys (pam_u2f) and the OpenPGP card key, in a
-# panel opened from the control center. The noctalia-security-hw helper (../helper)
-# talks to the hardware: one operation per process, one JSON object per output line.
+# Fingerprints (fprintd), FIDO2/U2F keys (pam_u2f), the OpenPGP card and resident SSH
+# keys, one tab each, in a panel opened from the control center. The noctalia-security-hw
+# helper (../helper) talks to the hardware: one operation per process, one JSON event
+# per output line.
 
 id = "lbssousa/security-hardware"
 name = "Security Hardware"
-version = "1.0.0"
+version = "2.0.0"
 plugin_api = 42
 author = "lbssousa"
 license = "MIT"
-tags = ["security", "system", "utility"]
+tags = ["security", "system", "utility", "yubikey", "ssh"]
 icon = "fingerprint"
-description = "Enroll fingerprints, register FIDO2/U2F keys and set up the OpenPGP card key."
+description = "Enroll fingerprints, register FIDO2/U2F keys, set up the OpenPGP card key and manage resident SSH keys."
 
 [[setting]]
 key = "helper"
@@ -22,12 +23,13 @@ default = "noctalia-security-hw"
 [[panel]]
 id = "panel"
 entry = "panel.luau"
-width = 560
-height = 680
+width = 600
+height = 720
 placement = "floating"
 position = "center"
 keyboard_focus = "on_demand"
 dismiss_on_outside_click = true
+capture_keys = ["ctrl+tab", "ctrl+shift+tab", "f5", "alt+r", "alt+i", "alt+s", "alt+n", "alt+t"]
 
 [[shortcut]]
 id = "shortcut"

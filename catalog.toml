@@ -5,10 +5,10 @@
 [[plugin]]
 id = "lbssousa/security-hardware"
 name = "Security Hardware"
-version = "1.0.0"
+version = "2.0.0"
 author = "lbssousa"
 license = "MIT"
 icon = "fingerprint"
-description = "Enroll fingerprints, register FIDO2/U2F keys and set up the OpenPGP card key."
+description = "Enroll fingerprints, register FIDO2/U2F keys, set up the OpenPGP card key and manage resident SSH keys."
 plugin_api = 42
-tags = ["security", "system", "utility"]
+tags = ["security", "system", "utility", "yubikey", "ssh"]

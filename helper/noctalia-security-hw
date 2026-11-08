@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+"""Runs the helper from a checkout (helper/) or an install (bin/ next to lib/noctalia-security-hw/)."""
+
+import os
+import sys
+
+here = os.path.dirname(os.path.realpath(__file__))
+for candidate in (here, os.path.join(here, "..", "lib", "noctalia-security-hw")):
+    if os.path.isdir(os.path.join(candidate, "noctalia_security_hw")):
+        sys.path.insert(0, os.path.normpath(candidate))
+        break
+
+from noctalia_security_hw.cli import main  # noqa: E402
+
+main()
