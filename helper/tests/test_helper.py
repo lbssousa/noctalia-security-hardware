@@ -387,6 +387,33 @@ class SessionTest(unittest.TestCase):
         self.assertEqual(stdin, "PRIMARY0000000000000000000000000000000000:6:\n")
         self.assertEqual(self.last("done")["op"], "gpg.trust")
 
+    def run_command(self, *argv):
+        """An operation as the command line runs it: a fresh session that only
+        loads what cli.prepare loads for it."""
+        op, coroutine = cli.operation(self.session, argv[0], argv[1], list(argv[2:]), None)
+
+        async def prepared():
+            await cli.prepare(self.session, op)
+            await coroutine
+
+        self.run_op(self.session.execute(op, prepared()))
+
+    def test_gpg_trust_from_the_command_line_reads_the_card_first(self):
+        self.run_command("gpg", "trust")
+        _, stdin, _, _ = self.runner.ran("gpg", "--import-ownertrust")[0]
+        self.assertEqual(stdin, "PRIMARY0000000000000000000000000000000000:6:\n")
+        self.assertEqual(self.last("done")["op"], "gpg.trust")
+
+    def test_gpg_remove_from_the_command_line_reads_the_card_first(self):
+        self.runner.answers[("gpg", "--list-secret-keys")] = helper.Result(0, "")
+        self.run_command("gpg", "remove")
+        self.assertEqual(self.runner.ran("gpg", "--batch", "--yes")[0][0][3], "--delete-keys")
+        self.assertEqual(self.last("done")["op"], "gpg.remove")
+
+    def test_every_gpg_operation_reads_the_card_first(self):
+        for action in ("import", "import-file", "trust", "remove"):
+            self.assertIn("gpg." + action, cli.NEEDS_CARD)
+
     def test_gpg_remove_takes_out_the_public_key_and_the_card_stubs(self):
         self.registered()
         self.runner.answers[("gpg", "--list-secret-keys")] = helper.Result(

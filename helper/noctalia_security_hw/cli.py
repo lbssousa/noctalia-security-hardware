@@ -137,9 +137,18 @@ def operation(session, area, action, args, pin):
     raise Usage("unknown command")
 
 
-# Operations that need to know the connected keys first.
+# Operations that need to know the connected keys first: each runs in a
+# process of its own, which starts knowing nothing.
 NEEDS_DEVICES = {"fido.register", "ssh.import", "ssh.create", "ssh.delete"}
-NEEDS_CARD = {"gpg.import", "gpg.import-file"}
+NEEDS_CARD = {"gpg.import", "gpg.import-file", "gpg.trust", "gpg.remove"}
+
+
+async def prepare(session, op):
+    """Loads what `op` needs before it runs."""
+    if op in NEEDS_DEVICES:
+        await session.load_devices()
+    if op in NEEDS_CARD:
+        await session.load_card()
 
 
 async def run_session(argv):
@@ -163,10 +172,7 @@ async def run_session(argv):
         loop.add_signal_handler(signum, session.cancel)
 
     async def prepared():
-        if op in NEEDS_DEVICES:
-            await session.load_devices()
-        if op in NEEDS_CARD:
-            await session.load_card()
+        await prepare(session, op)
         await coroutine
 
     await session.execute(op, prepared())
